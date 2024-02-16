@@ -9,6 +9,13 @@ version = "0.0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+    withJavadocJar()
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
 }
 
 configurations {
